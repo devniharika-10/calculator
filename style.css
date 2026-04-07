@@ -1,0 +1,171 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* PAGE BACKGROUND */
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+}
+
+/* CALCULATOR CONTAINER */
+
+.calculator{
+
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(15px);
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 8px 30px rgba(0,0,0,0.2);
+
+width:320px;
+
+}
+
+/* DISPLAY SCREEN */
+
+#display{
+
+width:100%;
+
+height:60px;
+
+border:none;
+
+outline:none;
+
+font-size:28px;
+
+text-align:right;
+
+padding:10px;
+
+margin-bottom:15px;
+
+border-radius:10px;
+
+background:rgba(255,255,255,0.9);
+
+}
+
+/* BUTTON GRID */
+
+.buttons{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:10px;
+
+}
+
+/* GENERAL BUTTON STYLE */
+
+button{
+
+padding:15px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:0.2s;
+
+background:white;
+
+}
+
+/* BUTTON HOVER EFFECT */
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+/* FUNCTION BUTTONS (C, Delete) */
+
+.function{
+
+background:#f87171;
+
+color:white;
+
+}
+
+/* OPERATOR BUTTONS */
+
+.operator{
+
+background:#38bdf8;
+
+color:white;
+
+}
+
+/* EQUAL BUTTON */
+
+.equal{
+
+grid-column:span 2;
+
+background:#22c55e;
+
+color:white;
+
+}
+
+/* ZERO BUTTON */
+
+.zero{
+
+grid-column:span 2;
+
+}
+
+/* SMALL SCREEN RESPONSIVE */
+
+@media (max-width:400px){
+
+.calculator{
+
+width:90%;
+
+}
+
+button{
+
+padding:12px;
+
+font-size:16px;
+
+}
+
+#display{
+
+font-size:24px;
+
+}
+
+}
